@@ -27,7 +27,7 @@
                 <li class="nav-item"><a class="nav-link active" href="#">All Complaints</a></li>
             </ul>
             <span class="navbar-text text-white me-3">
-                    Welcome, Admin ${complaint.getUsername()}! </span>
+                    Welcome, Admin ${Complaint.getUsername()}! </span>
             <a href="logout" class="btn btn-outline-light">Logout</a> </div>
     </div>
 </nav>

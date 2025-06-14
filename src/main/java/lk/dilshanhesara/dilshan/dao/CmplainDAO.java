@@ -70,4 +70,33 @@ public class CmplainDAO {
         }
         return complaints;
     }
+
+    public Complaint getCompUp(int complaintId) {
+        String sql = "SELECT * FROM complaints WHERE complaint_id = ?";
+        Complaint complaint = null;
+
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) {
+
+            pst.setInt(1, complaintId);
+
+            try (ResultSet rs = pst.executeQuery()) {
+                if (rs.next()) {
+                    complaint = new Complaint();
+                    complaint.setId(rs.getInt("complaint_id"));
+                    complaint.setTitle(rs.getString("title"));
+                    complaint.setDescription(rs.getString("description"));
+                    complaint.setStatus(rs.getString("status"));
+                    complaint.setRemarks(rs.getString("remarks"));
+                    complaint.setUserId(rs.getInt("submitted_by_user_id"));
+                    complaint.setCrt(rs.getTimestamp("created_at"));
+                    complaint.setUpdt(rs.getTimestamp("updated_at"));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return complaint;
+    }
+
 }

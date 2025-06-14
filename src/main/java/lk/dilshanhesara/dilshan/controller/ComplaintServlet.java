@@ -41,6 +41,13 @@ public class ComplaintServlet extends HttpServlet {
 
                     break;
 
+                case "delete":
+
+                   int idDel = Integer.parseInt(request.getParameter("id"));
+                    complaintDAO.deleteComp(idDel);
+                    response.sendRedirect("dashboard");
+                    break;
+
                 default:
                     response.sendRedirect("dashboard");
                     break;

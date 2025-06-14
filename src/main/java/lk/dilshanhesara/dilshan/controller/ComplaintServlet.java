@@ -5,8 +5,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import lk.dilshanhesara.dilshan.dao.CmplainDAO;
 import lk.dilshanhesara.dilshan.model.Complaint;
+import lk.dilshanhesara.dilshan.model.User;
 
 import java.io.IOException;
 
@@ -50,6 +52,33 @@ public class ComplaintServlet extends HttpServlet {
         }
     }
 
+
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+        String action = request.getParameter("action");
+        HttpSession session = request.getSession(false);
+
+        if (session == null || session.getAttribute("user") == null) {
+            response.sendRedirect("login.jsp");
+            return;
+        }
+
+     if ("update".equals(action)) {
+
+            int id = Integer.parseInt(request.getParameter("id"));
+            String status = request.getParameter("status");
+            String remarks = request.getParameter("remarks");
+
+            Complaint complaintToUpdate = new Complaint();
+            complaintToUpdate.setId(id);
+            complaintToUpdate.setStatus(status);
+            complaintToUpdate.setRemarks(remarks);
+
+            complaintDAO.updateComp(complaintToUpdate);
+        }
+
+        response.sendRedirect("dashboard");
+    }
 
 
 }

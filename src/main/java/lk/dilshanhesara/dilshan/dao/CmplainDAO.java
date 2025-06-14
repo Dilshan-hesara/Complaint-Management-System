@@ -98,5 +98,20 @@ public class CmplainDAO {
         }
         return complaint;
     }
+    public void updateComp(Complaint complaint) {
+        String sql = "UPDATE complaints SET status = ?, remarks = ? WHERE complaint_id = ?";
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) {
+
+            pst.setString(1, complaint.getStatus());
+            pst.setString(2, complaint.getRemarks());
+            pst.setInt(3, complaint.getId());
+
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

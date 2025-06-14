@@ -12,5 +12,7 @@
 </head>
 <body>
 
+<h1>admind dash</h1>
+
 </body>
 </html>

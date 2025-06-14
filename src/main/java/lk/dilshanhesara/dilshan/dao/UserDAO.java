@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class UserDAO {
 
-    private User validateUser(String username, String password) {
+    public User validateUser(String username, String password) {
         String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
         User user = null;
 

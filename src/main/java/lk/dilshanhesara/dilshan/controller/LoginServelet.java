@@ -19,13 +19,16 @@ import java.sql.SQLException;
 @WebServlet("/login")
 public class LoginServelet extends HttpServlet {
 
+    private UserDAO userDAO;
+    public void init() { userDAO = new UserDAO(); }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        User user = validateUser(username, password);
+        User user = userDAO.validateUser(username, password);
 
         if (user != null) {
             HttpSession session = request.getSession();
@@ -36,29 +39,5 @@ public class LoginServelet extends HttpServlet {
         }
     }
 
-    private User validateUser(String username, String password) {
-        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
-        User user = null;
 
-        try (Connection con = DBCPDataSource.getConnection();
-             PreparedStatement pst = con.prepareStatement(sql)) {
-
-            pst.setString(1, username);
-            pst.setString(2, password);
-
-            try (ResultSet rs = pst.executeQuery()) {
-                if (rs.next()) {
-                    user = new User();
-                    user.setId(rs.getInt("user_id"));
-                    user.setUsername(rs.getString("username"));
-                    user.setRole(rs.getString("role"));
-                }
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return user;
-    }
 }

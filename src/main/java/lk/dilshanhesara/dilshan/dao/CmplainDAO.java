@@ -1,6 +1,42 @@
 package lk.dilshanhesara.dilshan.dao;
 
 
+import lk.dilshanhesara.dilshan.db.DBCPDataSource;
+import lk.dilshanhesara.dilshan.model.Complaint;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class CmplainDAO {
 
+    public List<Complaint> getAllComplaints() {
+        List<Complaint> complaints = new ArrayList<>();
+        String sql = "SELECT c.*, u.username FROM complaints c JOIN users u ON c.submitted_by_user_id = u.user_id ORDER BY c.complaint_id DESC";
+
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql);
+             ResultSet rs = pst.executeQuery()) {
+
+            while (rs.next()) {
+                Complaint complaint = new Complaint();
+                complaint.setId(rs.getInt("complaint_id"));
+                complaint.setTitle(rs.getString("title"));
+                complaint.setDescription(rs.getString("description"));
+                complaint.setStatus(rs.getString("status"));
+                complaint.setRemarks(rs.getString("remarks"));
+                complaint.setUserId(rs.getInt("submitted_by_user_id"));
+                complaint.setCrt(rs.getTimestamp("created_at"));
+                complaint.setUpdt(rs.getTimestamp("updated_at"));
+                complaint.setUsername(rs.getString("username"));
+                complaints.add(complaint);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return complaints;
+    }
 }

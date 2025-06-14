@@ -14,11 +14,6 @@ public class Complaint {
     private int userId;
     private Timestamp crt;
     private Timestamp updt;
-    private String username;
-
-    public Complaint() {
-    }
-
 
     public int getId() {
         return id;
@@ -68,12 +63,12 @@ public class Complaint {
         this.userId = userId;
     }
 
-    public Timestamp getCreatedAt() {
+    public Timestamp getCrt() {
         return crt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
-        this.crt = createdAt;
+    public void setCrt(Timestamp crt) {
+        this.crt = crt;
     }
 
     public Timestamp getUpdt() {
@@ -91,6 +86,13 @@ public class Complaint {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    private String username;
+
+    public Complaint() {
+    }
+
+
 
     @Override
     public String toString() {

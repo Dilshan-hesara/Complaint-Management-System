@@ -114,4 +114,17 @@ public class CmplainDAO {
     }
 
 
+    public void deleteComp(int idDel) {
+
+        String sql = "DELETE FROM complaints WHERE complaint_id = ?";
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) {
+
+            pst.setInt(1, idDel);
+            pst.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

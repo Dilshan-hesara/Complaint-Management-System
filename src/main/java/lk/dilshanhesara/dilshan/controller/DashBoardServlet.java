@@ -41,7 +41,8 @@ public class DashBoardServlet  extends HttpServlet {
             request.getRequestDispatcher("adminDashboard.jsp").forward(request, response);
 
         } else {
-
+            List<Complaint> complaints = complaintDAO.getComplaintsEmp(user.getId());
+            request.setAttribute("complaintsList", complaints);
             request.getRequestDispatcher("employeeDashboard.jsp").forward(request, response);
         }
     }

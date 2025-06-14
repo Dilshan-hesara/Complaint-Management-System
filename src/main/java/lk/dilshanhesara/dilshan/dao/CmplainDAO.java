@@ -39,4 +39,35 @@ public class CmplainDAO {
         }
         return complaints;
     }
+
+
+
+    public List<Complaint> getComplaintsEmp(int userId) {
+        List<Complaint> complaints = new ArrayList<>();
+        String sql = "SELECT * FROM complaints WHERE submitted_by_user_id = ? ORDER BY complaint_id DESC";
+
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) {
+
+            pst.setInt(1, userId);
+
+            try (ResultSet rs = pst.executeQuery()) {
+                while (rs.next()) {
+                    Complaint complaint = new Complaint();
+                    complaint.setId(rs.getInt("complaint_id"));
+                    complaint.setTitle(rs.getString("title"));
+                    complaint.setDescription(rs.getString("description"));
+                    complaint.setStatus(rs.getString("status"));
+                    complaint.setRemarks(rs.getString("remarks"));
+                    complaint.setUserId(rs.getInt("submitted_by_user_id"));
+                    complaint.setCrt(rs.getTimestamp("created_at"));
+                    complaint.setUpdt(rs.getTimestamp("updated_at"));
+                    complaints.add(complaint);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return complaints;
+    }
 }

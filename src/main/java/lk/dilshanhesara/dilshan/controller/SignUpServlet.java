@@ -38,6 +38,12 @@ public class SignUpServlet extends HttpServlet {
             return;
         }
 
+        if (userDAO.chekUnAv(username)) {
+            request.setAttribute("errorMessage", "Username is already taken. Please choose another one.");
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
+            return;
+        }
+
         User newUser = new User();
         newUser.setUsername(username);
         newUser.setPassword(password);

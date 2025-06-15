@@ -29,6 +29,17 @@ public class ComplaintServlet extends HttpServlet {
         try {
             switch (action) {
 
+                case "uedit":
+
+                    int idUed = Integer.parseInt(request.getParameter("id"));
+                    Complaint eComp = complaintDAO.getComLoadU(idUed);
+//                    request.setAttribute("complaint", eComp);
+                    request.setAttribute("complaint", eComp);
+
+                    request.getRequestDispatcher("empComplainFrom.jsp").forward(request, response);
+                    break;
+
+
                 case "edit":
 
 
@@ -47,6 +58,14 @@ public class ComplaintServlet extends HttpServlet {
                     complaintDAO.deleteComp(idDel);
                     response.sendRedirect("dashboard");
                     break;
+
+
+                case "add":
+                    request.getRequestDispatcher("empComplainFrom.jsp").forward(request, response);
+                    break;
+
+
+
 
                 default:
                     response.sendRedirect("dashboard");
@@ -70,16 +89,32 @@ public class ComplaintServlet extends HttpServlet {
             return;
         }
 
-     if ("update".equals(action)) {
+        User user = (User) session.getAttribute("user");
+
+        if ("create".equals(action)) {
+
+            String title = request.getParameter("title");
+            String description = request.getParameter("description");
+
+            Complaint newComplaint = new Complaint();
+            newComplaint.setTitle(title);
+            newComplaint.setDescription(description);
+            newComplaint.setUserId(user.getId());
+
+            complaintDAO.addComplaint(newComplaint);
+
+        } else if ("update".equals(action)) {
 
             int id = Integer.parseInt(request.getParameter("id"));
             String status = request.getParameter("status");
             String remarks = request.getParameter("remarks");
 
+
             Complaint complaintToUpdate = new Complaint();
             complaintToUpdate.setId(id);
             complaintToUpdate.setStatus(status);
             complaintToUpdate.setRemarks(remarks);
+
 
             complaintDAO.updateComp(complaintToUpdate);
         }

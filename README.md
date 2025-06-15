@@ -54,7 +54,7 @@ Here are a few screenshots of the application's user interface, showcasing the m
 
 | Admin Dashboard | Employee Dashboard |
 | :---: | :---: |
-| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/03.png" width="900px" height="300px" /> | <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/04.png" width="900px" height="300px"/> |
+| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/03.png" width="950px" height="250px" /> | <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/04.png" width="950px" height="250px"/> |
 
 ---
 

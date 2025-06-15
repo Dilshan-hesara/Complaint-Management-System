@@ -107,6 +107,7 @@ public class CmplainDAO {
             pst.setString(2, complaint.getRemarks());
             pst.setInt(3, complaint.getId());
 
+
             pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -126,5 +127,67 @@ public class CmplainDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void addComplaint(Complaint comp) {
+
+        String sql = "INSERT INTO complaints (title, description, submitted_by_user_id, status) VALUES (?, ?, ?, ?)";
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) {
+
+            pst.setString(1, comp.getTitle());
+            pst.setString(2, comp.getDescription());
+            pst.setInt(3, comp.getUserId());
+            pst.setString(4, "Submitted");
+
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Complaint getComLoadU(int complaintId) {
+        String sql = "SELECT * FROM complaints WHERE complaint_id = ?";
+        Complaint complaint = null;
+
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) {
+
+            pst.setInt(1, complaintId);
+
+            try (ResultSet rs = pst.executeQuery()) {
+                if (rs.next()) {
+                    complaint = new Complaint();
+                    complaint.setId(rs.getInt("complaint_id"));
+                    complaint.setTitle(rs.getString("title"));
+                    complaint.setDescription(rs.getString("description"));
+                    complaint.setStatus(rs.getString("status"));
+                    complaint.setRemarks(rs.getString("remarks"));
+                    complaint.setUserId(rs.getInt("submitted_by_user_id"));
+                    complaint.setCrt(rs.getTimestamp("created_at"));
+                    complaint.setUpdt(rs.getTimestamp("updated_at"));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return complaint;
+    }
+
+    public void updateCompEmp(Complaint compUpdateEmp) {
+        String sql = "UPDATE complaints SET title = ?, description = ? WHERE complaint_id = ?";
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) {
+
+            pst.setString(1, compUpdateEmp.getTitle());
+            pst.setString(2, compUpdateEmp.getDescription());
+            pst.setInt(3, compUpdateEmp.getId());
+
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

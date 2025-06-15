@@ -90,7 +90,7 @@ Dilshan Hesara
 ### 📁  Repository
 
 ```bash
-git clone https://github.com/Dilshan-hesara
+git clone https://github.com/Dilshan-hesara/Complaint-Management-System.git
 
 ```
 

@@ -16,70 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="assets/DashBoardStyle.css">
 
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .navbar {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .container {
-            max-width: 1400px;
-        }
-
-        .card {
-            border: none;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .table {
-            font-size: 0.9rem;
-        }
-
-        .table thead th {
-            background-color: #f1f5f9;
-            color: #64748b;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 2px solid #e2e8f0;
-        }
-
-        .table tbody tr {
-            transition: background-color 0.2s ease;
-        }
-
-        .table tbody tr:hover {
-            background-color: #f8fafc;
-        }
-
-        .table tbody tr td {
-            vertical-align: middle;
-            border-color: #edf2f7;
-        }
-
-        .badge {
-            padding: 0.5em 0.75em;
-            font-weight: 500;
-            border-radius: 4px;
-        }
-
-        .btn-sm {
-            padding: 0.25rem 0.5rem;
-            font-size: 0.8rem;
-            border-radius: 4px;
-        }
-
-        .text-muted {
-            color: #94a3b8;
-        }
-    </style>
 </head>
 <body>
 

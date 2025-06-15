@@ -58,6 +58,20 @@
         <div class="text-center mt-3">
             <p>Don't have an account? <a href="signup.jsp">Sign Up</a></p>
         </div>
+
+        <%
+            String errorMessage = (String) request.getAttribute("errorMessage");
+            if (errorMessage != null) {
+        %>
+        <div class="alert alert-danger" role="alert">
+            <%= errorMessage %>
+        </div>
+        <%
+            }
+        %>
+
+        <form action="login" method="post">
+        </form>
     </div>
 </div>
 

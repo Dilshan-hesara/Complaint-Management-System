@@ -28,7 +28,7 @@
             </ul>
 
             <span class="navbar-text text-white me-3">
-    Welcome, Admin <%= ((lk.dilshanhesara.dilshan.model.User) request.getAttribute("logUser")).getUsername() %>!
+    Welcome, <%= ((lk.dilshanhesara.dilshan.model.User) request.getAttribute("logUser")).getUsername() %>!
 </span>
 
             <a href="logout" class="btn btn-outline-light">Logout</a> </div>

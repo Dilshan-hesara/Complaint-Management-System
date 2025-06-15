@@ -26,8 +26,11 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link active" href="#">My Complaints</a></li>
             </ul>
+
             <span class="navbar-text text-white me-3">
-                    Welcome, ${Complaint.username}! </span>
+    Welcome, <%= ((lk.dilshanhesara.dilshan.model.User) request.getAttribute("logUser")).getUsername() %>!
+</span>
+
             <a href="logout" class="btn btn-outline-light">Logout</a> </div>
     </div>
 </nav>

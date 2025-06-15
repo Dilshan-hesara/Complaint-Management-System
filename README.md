@@ -86,7 +86,7 @@ Here are a few screenshots of the application's user interface, showcasing the m
 ---
 ✍️ Author
 Dilshan Hesara
-🔗 GitHub - Dilshan-Hesara
+🔗 [GitHub - Dilshan-Hesara](https://github.com/Dilshan-hesara)
 ### 📁  Repository
 
 ```bash

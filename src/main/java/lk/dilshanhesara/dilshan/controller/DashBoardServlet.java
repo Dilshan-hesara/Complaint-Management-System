@@ -35,6 +35,9 @@ public class DashBoardServlet  extends HttpServlet {
 
         if ("Admin".equals(user.getRole())) {
             List<Complaint> complaints = complaintDAO.getAllComplaints();
+
+            request.setAttribute("logUser", user);
+
             request.setAttribute("complaintsList", complaints);
             System.out.println("Admin Dashboard accessed by: " + user.getUsername());
             System.out.println("Complaints List: " + complaints);

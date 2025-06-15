@@ -117,6 +117,19 @@ public class ComplaintServlet extends HttpServlet {
 
 
             complaintDAO.updateComp(complaintToUpdate);
+        }else  if ("eupdate".equals(action)) {
+
+            int idUed = Integer.parseInt(request.getParameter("id"));
+            String title = request.getParameter("title");
+            String description = request.getParameter("description");
+
+            Complaint compUpdateEmp = new Complaint();
+            compUpdateEmp.setId(idUed);
+            compUpdateEmp.setTitle(title);
+            compUpdateEmp.setDescription(description);
+
+            System.out.println("Updating complaint for employee: " + compUpdateEmp);
+            complaintDAO.updateCompEmp(compUpdateEmp);
         }
 
         response.sendRedirect("dashboard");

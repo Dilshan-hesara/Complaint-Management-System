@@ -27,17 +27,24 @@ The primary goal of this system is to provide a platform for internal employees 
 - **MVC Architecture:** Separation of concerns (Servlets, DAO, Beans, JSP).
 - **Database Connection Pooling:** Using Apache Commons DBCP2.
 
+---
+
+## 👨‍💻 Developed By
+
+[![Dilshan Hesara](https://img.shields.io/badge/GitHub-Dilshan--Hesara-blue?logo=github&style=flat-square)](https://github.com/Dilshan-Hesara)
+
+Crafted with ❤️ using **Jakarta EE**, **JSP**, **DBCP**, **MySQL**, **ApacheTomcat**, and **MVC Architecture**.
 
 
 ## 📸 Application Screenshots
-
-> _Below are some sample screenshots from the system interface._
 
 - **Login Page**  
 - **Sign-up Page**  
 - **Employee Dashboard**  
 - **Admin Dashboard**  
 - **Complaint Submission Form**
+
+---
 
 ## Screenshots
 

@@ -39,12 +39,13 @@ public class DashBoardServlet  extends HttpServlet {
             request.setAttribute("logUser", user);
 
             request.setAttribute("complaintsList", complaints);
-            System.out.println("Admin Dashboard accessed by: " + user.getUsername());
-            System.out.println("Complaints List: " + complaints);
+            System.out.println("namwe " + user.getUsername());
+            System.out.println("Com list: " + complaints);
             request.getRequestDispatcher("adminDashboard.jsp").forward(request, response);
 
         } else {
             List<Complaint> complaints = complaintDAO.getComplaintsEmp(user.getId());
+            request.setAttribute("logUser", user);
             request.setAttribute("complaintsList", complaints);
             request.getRequestDispatcher("employeeDashboard.jsp").forward(request, response);
         }

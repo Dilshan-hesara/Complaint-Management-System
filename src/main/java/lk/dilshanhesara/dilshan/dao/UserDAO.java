@@ -35,4 +35,38 @@ public class UserDAO {
 
         return user;
     }
+
+
+    public void addUser(User user) {
+        String sql = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) {
+
+            pst.setString(1, user.getUsername());
+            pst.setString(2, user.getPassword());
+            pst.setString(3, "Employee");
+
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public boolean chekUnAv(String username) {
+        String sql = "SELECT COUNT(*) FROM users WHERE username = ?";
+        try (Connection con = DBCPDataSource.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) {
+
+            pst.setString(1, username);
+            try (ResultSet rs = pst.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt(1) > 0;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

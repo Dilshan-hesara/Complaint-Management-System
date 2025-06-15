@@ -39,8 +39,26 @@ The primary goal of this system is to provide a platform for internal employees 
 - **Admin Dashboard**  
 - **Complaint Submission Form**
 
-_(Screenshots to be added if available)_
+## Screenshots
 
+Here are a few screenshots of the application's user interface, showcasing the modern design and key functionalities.
+
+### Login & Sign-up Pages
+| Login Page | Sign-up Page |
+| :---: | :---: |
+| ![Login Page]() | ![Sign-up Page]() |
+
+<br>
+
+### Dashboards
+| Admin Dashboard | Employee Dashboard |
+| :---: | :---: |
+| ![Admin Dashboard]() | ![Employee Dashboard]() |
+
+<br>
+
+### Complaint Form
+![Complaint Form]()
 ---
 
 ## 🛠️ Setup and Configuration Guide

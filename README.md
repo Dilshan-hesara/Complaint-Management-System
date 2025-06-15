@@ -60,13 +60,12 @@ Here are a few screenshots of the application's user interface, showcasing the m
 
 ### 📝 Complaint Form
 
-| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/05.png" width="300px" height="300px" /> |
-| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/06.png" width="300px" height="300px" /> |
-
-| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/07.png" width="300px" height="300px" /> |
-
+| Edit Complaint (Admin) | New Complaint (Employee) | Edit Complaint (Employee) |
+| :----------------------: | :---------------------: | :------------------------: |
+| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/07.png" width="400px" height="200px" /> |<img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/05.png" width="400px" height="200px" /> |  <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/06.png" width="400px" height="200px" /> |
 
 ---
+
 
 ## 🛠️ Setup and Configuration Guide
 

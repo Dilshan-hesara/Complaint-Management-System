@@ -46,19 +46,19 @@ Here are a few screenshots of the application's user interface, showcasing the m
 ### Login & Sign-up Pages
 | Login Page | Sign-up Page |
 | :---: | :---: |
-| ![Login Page]() | ![Sign-up Page]() |
+| ![Login Page](https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/01.png) | ![Sign-up Page](https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/02.png) |
 
 <br>
 
 ### Dashboards
 | Admin Dashboard | Employee Dashboard |
 | :---: | :---: |
-| ![Admin Dashboard]() | ![Employee Dashboard]() |
+| ![Admin Dashboard](https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/03.png) | ![Employee Dashboard](https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/04.png) |
 
 <br>
 
 ### Complaint Form
-![Complaint Form]()
+![Complaint Form](https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/05.png)
 ---
 
 ## 🛠️ Setup and Configuration Guide

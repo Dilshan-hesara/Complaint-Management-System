@@ -42,23 +42,30 @@ The primary goal of this system is to provide a platform for internal employees 
 ## Screenshots
 
 Here are a few screenshots of the application's user interface, showcasing the modern design and key functionalities.
+### 🔐 Login & Sign-up Pages
 
-### Login & Sign-up Pages
 | Login Page | Sign-up Page |
 | :---: | :---: |
-| ![Login Page]() | ![Sign-up Page]() |
+| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/01.png" width="300px" height="300px" /> | <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/02.png" width="300px" height="300px" /> |
 
-<br>
+---
 
-### Dashboards
+### 📊 Dashboards
+
 | Admin Dashboard | Employee Dashboard |
 | :---: | :---: |
-| ![Admin Dashboard]() | ![Employee Dashboard]() |
+| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/03.png" width="900px" height="300px" /> | <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/04.png" width="900px" height="300px"/> |
 
-<br>
+---
 
-### Complaint Form
-![Complaint Form]()
+### 📝 Complaint Form
+
+| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/05.png" width="300px" height="300px" /> |
+| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/06.png" width="300px" height="300px" /> |
+
+| <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/07.png" width="300px" height="300px" /> |
+
+
 ---
 
 ## 🛠️ Setup and Configuration Guide

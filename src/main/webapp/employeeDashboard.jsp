@@ -77,7 +77,7 @@
                         <a href="#" class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true">Edit</a>
                         <a href="#" class="btn btn-sm btn-outline-danger disabled" aria-disabled="true">Delete</a>
                         <% } else { %>
-                        <a href="complaints?action=edit&id=<%= complaint.getId() %>" class="btn btn-sm btn-outline-secondary">Edit</a>
+                        <a href="complaints?action=uedit&id=<%= complaint.getId() %>" class="btn btn-sm btn-outline-secondary">Edit</a>
                         <a href="complaints?action=delete&id=<%= complaint.getId() %>" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure you want to delete this complaint?')">Delete</a>
                         <% } %>
                     </td>

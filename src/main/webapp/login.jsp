@@ -44,6 +44,20 @@
                 <button type="submit" class="btn btn-primary">Login</button>
             </div>
         </form>
+
+        <%
+            if ("true".equals(request.getParameter("success"))) {
+        %>
+        <div class="alert alert-success mt-3" role="alert">
+            Registration successful! Please login.
+        </div>
+        <%
+            }
+        %>
+
+        <div class="text-center mt-3">
+            <p>Don't have an account? <a href="signup.jsp">Sign Up</a></p>
+        </div>
     </div>
 </div>
 

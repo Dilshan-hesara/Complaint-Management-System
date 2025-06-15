@@ -99,8 +99,6 @@ git clone https://github.com/Dilshan-hesara
 CMS-A01/
 ├── .gitignore
 ├── pom.xml
-├── database/
-│   └── schema.sql
 └── src/
     └── main/
         ├── java/
@@ -108,7 +106,7 @@ CMS-A01/
         │       ├── controller/       # Servlet Controllers
         │       ├── dao/              # Data Access Objects
         │       ├── model/            # JavaBeans
-        │       └── db/               # Data Soures
+        │       └── db/               # Data Soures & SQLSchema
         └── webapp/
             ├── assets/               # Styles
             ├── WEB-INF/

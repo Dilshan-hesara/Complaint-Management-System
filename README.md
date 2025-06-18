@@ -53,7 +53,9 @@ Watch the full video demonstration of the **Complaint Management System (CMS)** 
 
 📺 [Click Here to Watch ](https://youtu.be/8iN61XVstGs)
 
-[![Watch on YouTube](https://img.youtube.com/vi/8iN61XVstGs/0.jpg)](https://youtu.be/8iN61XVstGs)
+<a href="https://youtu.be/8iN61XVstGs" target="_blank">
+  <img src="https://github.com/Dilshan-hesara/Complaint-Management-System/blob/master/src/main/webapp/assets/img/08.png" width="400" height="250" alt="Watch on YouTube">
+</a>
 
 ## Screenshots
 
